@@ -15,19 +15,23 @@ provider "aws" {
 }
 
 module "vpc_east" {
-  source    = "./vpc"
+  source = "./vpc"
+  
   providers = {
     aws = aws.east
   }
-  cidr = "10.10.0.0/16"
+  
+  cidr         = "10.10.0.0/16"
   vpc_name_tag = "east"
 }
 
 module "vpc_west" {
-  source    = "./vpc"
+  source = "./vpc"
+  
   providers = {
     aws = aws.west
   }
-  cidr = "10.20.0.0/16"
+  
+  cidr         = "10.20.0.0/16"
   vpc_name_tag = "west"
 }
