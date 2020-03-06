@@ -31,5 +31,5 @@ terraform apply
 ```
 
 - `Terraform apply` will:
-  - create new VPCs on each of the specified 2 AWS regions
-  - output VPC ids & tags
+  - create new VPC on each of the specified 2 AWS regions
+  - output ids & tags of both VPCs
